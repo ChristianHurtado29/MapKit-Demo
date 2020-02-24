@@ -94,12 +94,44 @@ extension MapViewController: UITextFieldDelegate {
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("\(view.annotation?.title) was selected")
-    }
+        guard let annotation = view.annotation else { return }
+        
+        guard let location = (Location.getLocations().filter {$0.title == annotation.title}).first else {return}
+        print("location is set to \(location.title)")
+        
+        guard let detailVC = storyboard?.instantiateViewController(identifier: "LocationDetailController", creator: { coder in
+            return LocationDetailController(coder: coder, location: location)
+        }) else {
+            fatalError("could not downcast to LocationDetailController")
+        }
+        
+//        transitition is nice but needs a dismiss button to get back, no bueno.
+//        detailVC.modalPresentationStyle = .currentContext
+//        detailVC.modalTransitionStyle = .crossDissolve
+        present(detailVC, animated: true)
+        }
     
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//
-//    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is MKPointAnnotation else { return nil }
+        
+        let identifier = "annotationView"
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        
+        if annotationView == nil{
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            annotationView?.glyphImage = UIImage(named: "duck")
+            annotationView?.glyphTintColor = .systemYellow
+            annotationView?.markerTintColor = .systemBlue
+            // annotationView?.glyphText = "iOS 6.3"
+        } else {
+            annotationView?.annotation = annotation
+        }
+        return annotationView
+
+    }
     
     
     func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {

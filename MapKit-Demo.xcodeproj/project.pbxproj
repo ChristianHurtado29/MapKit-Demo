@@ -14,6 +14,7 @@
 		13716E222404205900ED1DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13716E212404205900ED1DED /* Assets.xcassets */; };
 		13716E252404205900ED1DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13716E232404205900ED1DED /* LaunchScreen.storyboard */; };
 		13716E2D2404208900ED1DED /* CoreLocationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13716E2C2404208900ED1DED /* CoreLocationSession.swift */; };
+		13716E312404352A00ED1DED /* LocationDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13716E302404352A00ED1DED /* LocationDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		13716E242404205900ED1DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13716E262404205900ED1DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13716E2C2404208900ED1DED /* CoreLocationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationSession.swift; sourceTree = "<group>"; };
+		13716E302404352A00ED1DED /* LocationDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				13716E1A2404205800ED1DED /* SceneDelegate.swift */,
 				13716E2C2404208900ED1DED /* CoreLocationSession.swift */,
 				13716E1C2404205800ED1DED /* MapViewController.swift */,
+				13716E302404352A00ED1DED /* LocationDetailController.swift */,
 				13716E1E2404205800ED1DED /* Main.storyboard */,
 				13716E212404205900ED1DED /* Assets.xcassets */,
 				13716E232404205900ED1DED /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				13716E1D2404205800ED1DED /* MapViewController.swift in Sources */,
 				13716E192404205800ED1DED /* AppDelegate.swift in Sources */,
+				13716E312404352A00ED1DED /* LocationDetailController.swift in Sources */,
 				13716E2D2404208900ED1DED /* CoreLocationSession.swift in Sources */,
 				13716E1B2404205800ED1DED /* SceneDelegate.swift in Sources */,
 			);

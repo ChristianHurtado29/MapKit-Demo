@@ -49,5 +49,50 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
+        <!--Location Detail Controller-->
+        <scene sceneID="bYM-gg-SZa">
+            <objects>
+                <viewController storyboardIdentifier="LocationDetailController" id="xdJ-DV-teC" customClass="LocationDetailController" customModule="MapKit_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3fN-OM-RCY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfv-fT-CDp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ep9-87-Ftw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-6i-t5P">
+                                            <rect key="frame" x="20" y="8" width="374" height="289"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Imb-6i-t5P" firstAttribute="height" secondItem="ep9-87-Ftw" secondAttribute="height" multiplier="0.322545" id="1g7-b2-PSx"/>
+                                        <constraint firstItem="Imb-6i-t5P" firstAttribute="leading" secondItem="ep9-87-Ftw" secondAttribute="leading" constant="20" id="h3W-Kw-QT8"/>
+                                        <constraint firstItem="Imb-6i-t5P" firstAttribute="top" secondItem="ep9-87-Ftw" secondAttribute="top" constant="8" id="oPs-lj-Gra"/>
+                                        <constraint firstAttribute="trailing" secondItem="Imb-6i-t5P" secondAttribute="trailing" constant="20" id="pmV-ne-P08"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jfv-fT-CDp" firstAttribute="trailing" secondItem="qBo-sO-mp7" secondAttribute="trailing" id="EKU-56-DiR"/>
+                            <constraint firstAttribute="bottom" secondItem="jfv-fT-CDp" secondAttribute="bottom" id="Kcn-pA-oxD"/>
+                            <constraint firstItem="jfv-fT-CDp" firstAttribute="top" secondItem="3fN-OM-RCY" secondAttribute="top" id="ry3-Ce-ylD"/>
+                            <constraint firstItem="jfv-fT-CDp" firstAttribute="leading" secondItem="qBo-sO-mp7" secondAttribute="leading" id="xaW-aF-zkK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qBo-sO-mp7"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Imb-6i-t5P" id="kAG-RP-zhU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41X-Uj-WqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.7246376811595" y="114.50892857142857"/>
+        </scene>
     </scenes>
 </document>
